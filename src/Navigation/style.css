@@ -2,6 +2,16 @@
 .logo{
     text-align: center;
 }
+
+.movie{
+    color: yellow;
+}
+.navbar_items{
+    display: flex;
+    gap: 3%;
+    margin-top: 3%;
+}
+
 .caro {
     width: 1000%;
     max-width: 600px;
@@ -51,28 +61,26 @@
     margin-top: 10px;
   }
 
-input{
-    border-style: none;
-    padding: 12px 12px;
-}
-button{
-    border-style: none;
-    padding: 12px 12px;
-    border-radius: 5px;
-}
-
-.links{
-    list-style: none;
-    display: flex;
-    gap: 12%;
-    text-decoration: none;
-   
+ .input{
+    
+    padding: 2px 2px;
+} 
+.button{
+    background-color: yellow;
+    color: white;
+  
+     border-style: none; 
+    /* padding: 12px 12px; */
+ 
 }
 
 
-
-
-
+li{
+  margin-top: 30px;
+  margin-left: 15%;
+  text-decoration: none;
+  list-style: none;
+}
 
 
 

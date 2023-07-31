@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import './style.css';
 import { searchMovies } from "../utils/utilities";
+import { Link } from "react-router-dom";
+import GetMovies from "../components/getMovies";
+import Moviedetails from "../MovieDetails";
 const Navigation= () => {
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -12,27 +15,22 @@ const Navigation= () => {
     setSearchResults(results.results);
   };  return (
     <div className="Navbar">
-      <nav className="nav">
-        <div>
-          <h1 className="logo">
-            M<span>oo</span>vie
-          </h1>
-        </div>
-        <div className="search">
-          <input
-            value={searchValue}
-            onChange={handleInput}
-            type="text"
-            placeholder="Search"
-          />
-          <button onClick={handleSearch}>Search</button>
-        </div>
-        <div className="links">
-          <li><a href="">Home</a></li>
-          <li>My list</li>
-         
-        </div>
-      </nav>      {searchResults.length > 0 && (
+     <div className="navbar_items">
+     <h1>M <span className="movie">oo</span>vie</h1>
+          <input className="input" value={searchValue}onChange={handleInput}type="text"placeholder="Search"/>
+    <button onClick={handleSearch} className="button">Search</button>
+     
+     <li><a href="">Home</a></li>
+     <li a href="">My list</li>
+     
+    
+     
+        
+
+     </div>
+       
+      
+      {searchResults.length > 0 && (
         <div className="search-results">
           {searchResults.map((movie) => (
             <div key={movie.id} className="search-result">
